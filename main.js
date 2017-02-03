@@ -35,7 +35,39 @@ Nodelist.prototype.calculateRanges = function() {
             this.area.max = this.nodes[i].area;
         }
     }
-}
+};
+
+// If the node is an unknown type, clone the nodes list and then measure distances.
+
+Nodelist.prototype.determineUnknown = function() {
+    // normalise the data ranges
+    this.calculateRanges();
+
+    // go through each of our nodes
+    for (var i in this.nodes) {
+        // if the node doesnt have a type (i.e. apartment, flat, house)
+        if (! this.nodes[i].type) {
+
+            // clone the node list
+            this.nodes[i].neighbours = [];
+            for (var j in this.nodes) {
+                if (! this.nodes[j].type) {
+                    continue;
+                }
+                this.nodes[i].neighbours.push(new Node(this.nodes[j]));
+            }
+
+            // measure distances
+            this.nodes[i].measureDistances(this.areas, this.rooms);
+
+            // sort nodes by distance
+            this.nodes[i].sortByDistance();
+
+            // guess the type
+            console.log(this.nodes[i].guessType(this.k));
+        }
+    }
+};
 
 // for testing
 var object = {
