@@ -12,8 +12,13 @@ That's what k-nearest-neighbor means. "If the 3 (or 5 or 10, or 'k') nearest nei
 
 Here's the (simplified) procedure:
 
-Put all the data you have (including the mystery point) on a graph.
-Measure the distances between the mystery point and every other point.
-Pick a number. Three is usually good for small data sets.
-Figure out what the three closest points to the mystery point are.
-The majority of the three closest points is the answer.
+- Put all the data you have (including the mystery point) on a graph.
+- Measure the distances between the mystery point and every other point.
+- Pick a number. Three is usually good for small data sets.
+- Figure out what the three closest points to the mystery point are.
+- The majority of the three closest points is the answer.
+
+
+Important things to remember about creating a kNN:
+
+- You need to normalise your data (e.g. each set of data becomes a scale between 0 and 1) to cater for scale discrepancies and allow kNN to measure everything on level playing field.
