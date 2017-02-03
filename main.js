@@ -13,6 +13,8 @@ Nodelist.prototype.add = function(node) {
     this.nodes.push(node);
 };
 
+
+// TODO: abstract this so properties like 'areas' and 'rooms' are not hard-coded
 Nodelist.prototype.calculateRanges = function() {
     this.areas = {min: 1000000, max: 0};
     this.rooms = {min: 1000000, max: 0};
@@ -35,11 +37,11 @@ Nodelist.prototype.calculateRanges = function() {
     }
 }
 
-
 // for testing
 var object = {
     "type":"apartment",
     "area":10,
     "rooms":12
 };
-var test = new Node(object);
+var node = new Node(object);
+var nodeList = new Nodelist(3);
