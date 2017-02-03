@@ -1,4 +1,5 @@
 # k-nearest-neighbour
+Source: [http://burakkanber.com/](http://burakkanber.com/blog/machine-learning-in-js-k-nearest-neighbor-part-1/)
 
 Machine Learning in JS: k-nearest-neighbor
 
