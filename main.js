@@ -17,6 +17,8 @@ Nodelist.prototype.calculateRanges = function() {
     this.areas = {min: 1000000, max: 0};
     this.rooms = {min: 1000000, max: 0};
 
+    // if less than initial min then set min
+    // if greater than initial max then set max
     for (var i in this.nodes) {
         if (this.nodes[i].rooms < this.rooms.min) {
             this.rooms.min = this.nodes[i].rooms;
