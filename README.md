@@ -22,4 +22,4 @@ Here's the (simplified) procedure:
 Important things to remember about creating a kNN:
 
 - You need to normalise your data (e.g. each set of data becomes a scale between 0 and 1) to cater for scale discrepancies and allow kNN to measure everything on level playing field.
-..- you don't need to scale things evenly (into a square) like I described above. If area is more important to the problem than the number of rooms, you can scale those two features differently. This is called "weighting", and gives more importance to one feature or another.  
+  - you don't need to scale things evenly (into a square) like I described above. If area is more important to the problem than the number of rooms, you can scale those two features differently. This is called "weighting", and gives more importance to one feature or another.  
