@@ -14,7 +14,7 @@ Nodelist.prototype.add = function(node) {
 };
 
 
-// TODO: abstract this so properties like 'areas' and 'rooms' are not hard coded
+// TODO: abstract this so properties like 'areas' and 'rooms' are not hard-coded
 Nodelist.prototype.calculateRanges = function() {
     this.areas = {min: 1000000, max: 0};
     this.rooms = {min: 1000000, max: 0};
